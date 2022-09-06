@@ -19,8 +19,8 @@ const CharactersPage = () => {
                 options={{
                     paging:true,
                     pageSize:10,
-                    emptyRowsWhenPaging: false,   // To avoid of having empty rows
-                    pageSizeOptions:[6,12,20,50],
+                    emptyRowsWhenPaging: false,
+                    pageSizeOptions:[10,15,20,50],
                 }}
                 data={characters}
                 title="Characters"
