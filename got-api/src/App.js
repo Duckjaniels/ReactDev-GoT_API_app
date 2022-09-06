@@ -1,10 +1,18 @@
-function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
+import { BrowserRouter,Route, Routes } from "react-router-dom";
+import HouseDetailsPages from "./pages/HouseDetailsPages";
+import CharactersPage from "./pages/CharactersPage";
 
-            </header>
-        </div>
+
+const App = () => {
+    return (
+
+
+                <BrowserRouter>
+                    <Routes>
+                            <Route  path='/*' element={<CharactersPage />}/>
+                            <Route path='/house' element={<HouseDetailsPages />}/>
+                    </Routes>
+                </BrowserRouter>
     );
 }
 
