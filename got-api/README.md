@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+React Dev - GoT API app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Te main purpose of the project is creating a simple React application 
+with use of an API of Ice And Fire, as an endpoint to display the paginated list of products.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Contact](#contact)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## General Information
 
-### `npm test`
+- Application should display 2 data types: characters and houses.
+- As an entry point application should use characters page with the link to house page and backwards to characters page.
+- Table of Characters should display 5 columns with content of (character name, gender, culture, allegiances, status whether is alive or dead).
+- Table of Houses should display 9 columns with content of (name of the House, region, coat of Arms, words, titles, seats, has died out, has overlord, number of Cadet Branches)
+- The table should display 25 items per page. Under the table, there should be a pagination component, which allows switching between pages with “next” and “previous” arrows.
+- It should be possible to filter the list of Characters returned from API by Gender.
+  Use select or dropdown with “Any”, "Male" and "Female" as options.
+  It should be possible to filter the list of Characters returned from API by Culture.
+  Use text input.
+- Allegiances
+  Display list of House id fields based on what is found in allegiances field.
+  Link each House displayed to a dedicated page with House details.
+  Display “No allegiances” when not available.
+- Alive
+  Based on born and died fields:
+  --Display "Unknown” if both born and died are not provided. 
+  --Display "No” if born is not provided.
+  --Display "No, died at X years old" when Character has died, where X is his age in years at the time
+  of death.
+  --Display "Yes" when Character has not died.
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- React-Router
+- Material UI - Material-table
+- React Hooks (useState, useEffect)
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![1](./src/assets/ss1.png)
+![2](./src/assets/ss2.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+- download or clone repository / `git clone repo_address`
+- install dependencies / `npm install`
+- start app by `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Status
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Project is: _in progress_.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Until now, I've managed to create React app that displays Table of Characters data as an entry point, to reach the Table of House content it is necessary to entry http://localhost:3000/houses path.
+As a default table displaying 25 results per page. Application user can select or dropdown with 10, 25 and 50 as options.
+Table allows user to filter Genders of the Characters as well as search input allows to find individual phrases.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Room for Improvement
 
-## Learn More
+- Alive column implementation based on born and died fields.
+- Allegiances with displaying list of House id fields based on what is found in allegiances field with the links to house details page.
+- From the Table of Characters link each House displayed to a dedicated page with the House Details.
+  From the House Details page it should be possible to go back to the Table of Characters page.
+- 
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by [_Duckjaniels_](https://www.linkedin.com/in/maksym-kaczorowski-008b3a154/) - feel free to contact me!

@@ -18,7 +18,7 @@ const CharactersPage = () => {
                 ]}
                 options={{
                     paging:true,
-                    pageSize:10,
+                    pageSize:25,
                     emptyRowsWhenPaging: false,
                     pageSizeOptions:[10,15,20,50],
                 }}
